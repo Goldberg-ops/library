@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Book Library</h1>
+
+<!-- Category Filter -->
+<div class="mb-4">
+    <h5>Filter by Category:</h5>
+    <a href="{{ url_for('home', category='All') }}" class="btn btn-outline-primary {% if category == 'All' %}active{% endif %}">All</a>
+    <a href="{{ url_for('home', category='Python') }}" class="btn btn-outline-primary {% if category == 'Python' %}active{% endif %}">Python</a>
+    <a href="{{ url_for('home', category='Java') }}" class="btn btn-outline-primary {% if category == 'Java' %}active{% endif %}">Java</a>
+    <a href="{{ url_for('home', category='C++') }}" class="btn btn-outline-primary {% if category == 'C++' %}active{% endif %}">C++</a>
+    <a href="{{ url_for('home', category='Reverse Engineering') }}" class="btn btn-outline-primary {% if category == 'Reverse Engineering' %}active{% endif %}">Reverse Engineering</a>
+    <a href="{{ url_for('home', category='Linux') }}" class="btn btn-outline-primary {% if category == 'Linux' %}active{% endif %}">Linux</a>
+
+    <!--<a href="{{ url_for('home', category='Other') }}" class="btn btn-outline-primary {% if category == 'Other' %}active{% endif %}">Other</a>-->
+
+</div>
+
+<div class="row row-cols-2 row-cols-md-4 row-cols-lg-5 g-4">
+    {% for book in books %}
+    <div class="col">
+        <div class="card h-100">
+            <div class="image-container">
+                <img src="{{ book.image }}" class="card-img-top book-image" alt="{{ book.title }}">
+            </div>
+            <div class="card-body d-flex flex-column">
+                <h6 class="card-title flex-grow-1">{{ book.title }}</h6>
+                <p class="card-text"><small class="text-muted">Category: {{ book.category }}</small></p>
+                <a href="{{ book.link }}" class="btn btn-primary btn-sm mt-auto" target="_blank">Read Online</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Pagination -->
+<nav aria-label="Page navigation" class="mt-4">
+    <ul class="pagination justify-content-center">
+        {% if page > 1 %}
+        <li class="page-item">
+            <a class="page-link" href="{{ url_for('home', page=page-1, category=category) }}" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        {% endif %}
+
+        {% for p in range(max(1, page-2), min(total_pages, page+2) + 1) %}
+        <li class="page-item {% if p == page %}active{% endif %}">
+            <a class="page-link" href="{{ url_for('home', page=p, category=category) }}">{{ p }}</a>
+        </li>
+        {% endfor %}
+
+        {% if page < total_pages %}
+        <li class="page-item">
+            <a class="page-link" href="{{ url_for('home', page=page+1, category=category) }}" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+{% endblock %}

@@ -27,16 +27,15 @@ This is a Flask-based digital library web application that allows users to brows
     On Windows, use
    - ```
      venv\Scripts\activate
-
 5. Install the required packages:
-   - `pip install -r requirements.txt`
-
+   - ```
+     pip install -r requirements.txt
 6. Set up the database:
 (Include instructions for initializing the SQLite database if necessary)
 
 7. Run the application:
-   `python application.py`
-
+   - ```
+     python application.py
 ## Usage
 After running the application, you can access it by opening a web browser and navigating to `http://127.0.0.1:5000` (or whichever port your application is configured to use).
 

@@ -24,7 +24,7 @@ This is a Flask-based digital library web application that allows users to brows
      `python -m venv venv`
    - ```
      `source venv/bin/activate`
-   # On Windows, use
+   -  On Windows, use
    - ```
      venv\Scripts\activate
 

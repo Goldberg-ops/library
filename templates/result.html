@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Search Result{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Search Result</h1>
+{% if error %}
+<div class="alert alert-danger" role="alert">
+    {{ error }}
+</div>
+{% else %}
+<div class="card">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="{{ book.image }}" class="img-fluid rounded-start" alt="{{ book.title }}">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{ book.title }}</h5>
+                <a href="{{ book.link }}" class="btn btn-primary" target="_blank">Read Online</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

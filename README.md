@@ -17,7 +17,7 @@ This is a Flask-based digital library web application that allows users to brows
 1. Clone the repository:
    - ```shell
      git clone https://github.com/Goldberg-ops/library.git
-   -
+   - ```
       cd libray-master
    ```
 

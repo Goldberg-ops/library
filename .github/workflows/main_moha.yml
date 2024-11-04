@@ -66,4 +66,4 @@ jobs:
         with:
           app-name: 'moha'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_329D924B3ABA421DAC859BD2DBF11FBB }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6FDA33EDD64B4B2AB6946387C861D96E }}

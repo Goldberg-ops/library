@@ -20,16 +20,21 @@ This is a Flask-based digital library web application that allows users to brows
    - ```
      cd libray-master
 3. Create and activate a virtual environment:
-   - `python -m venv venv`
-   - `source venv/bin/activate`  # On Windows, use venv\Scripts\activate
+   - ```
+     `python -m venv venv`
+   - ```
+     `source venv/bin/activate`
+   # On Windows, use
+   - ```
+     venv\Scripts\activate
 
-4. Install the required packages:
+5. Install the required packages:
    - `pip install -r requirements.txt`
 
-5. Set up the database:
+6. Set up the database:
 (Include instructions for initializing the SQLite database if necessary)
 
-6. Run the application:
+7. Run the application:
    `python application.py`
 
 ## Usage

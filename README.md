@@ -18,8 +18,7 @@ This is a Flask-based digital library web application that allows users to brows
    - ```shell
      git clone https://github.com/Goldberg-ops/library.git
    ```
-   - ```shell
-   cd libray-master
+   - cd libray-master
    ```
 
 3. Create and activate a virtual environment:

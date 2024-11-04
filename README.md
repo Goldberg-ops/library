@@ -15,21 +15,21 @@ This is a Flask-based digital library web application that allows users to brows
 ## Setup and Installation
 
 1. Clone the repository:
-   git clone https://github.com/Goldberg-ops/library.git
-   cd libray-master
+   - `git clone https://github.com/Goldberg-ops/library.git`
+   - `cd libray-master`
 
-2. Create and activate a virtual environment:
-   python -m venv venv
-   source venv/bin/activate  # On Windows, use venv\Scripts\activate
+3. Create and activate a virtual environment:
+   - `python -m venv venv`
+   - `source venv/bin/activate`  # On Windows, use venv\Scripts\activate
 
-3. Install the required packages:
-   pip install -r requirements.txt
+4. Install the required packages:
+   - `pip install -r requirements.txt`
 
-4. Set up the database:
+5. Set up the database:
 (Include instructions for initializing the SQLite database if necessary)
 
-5. Run the application:
-   python application.py
+6. Run the application:
+   `python application.py`
 
 ## Usage
 After running the application, you can access it by opening a web browser and navigating to `http://127.0.0.1:5000` (or whichever port your application is configured to use).

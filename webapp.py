@@ -6,13 +6,12 @@ from math import ceil
 import os
 
 # Set up database path
-"""data_dir = os.path.join('/home', 'site', 'wwwroot')
+data_dir = os.path.join('/home', 'site', 'wwwroot')
 if not os.path.exists(data_dir):
     os.makedirs(data_dir)
 
-db_path = os.path.join(data_dir, 'books.sqlite')"""
+db_path = os.path.join(data_dir, 'books.sqlite')
 
-db_path = "book.sqlite"
 app = Flask(__name__)
 
 BOOKS_PER_PAGE = 100 # You can adjust this number as needed

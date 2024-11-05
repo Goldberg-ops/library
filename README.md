@@ -9,7 +9,7 @@ This is a Flask-based digital library web application that allows users to brows
 - `book.sqlite`: SQLite database file
 - `requirements.txt`: List of Python package dependencies
 - `startup.txt`: Initial setup or configuration file
-- `static/`: Directory containing static files (CSS, JavaScript)
+- `static/`: Directory containing static file (CSS)
 - `templates/`: Directory containing HTML templates
 
 ## Setup and Installation
@@ -21,9 +21,9 @@ This is a Flask-based digital library web application that allows users to brows
      cd libray-master
 3. Create and activate a virtual environment:
    - ```
-     `python -m venv venv`
+     python -m venv venv
    - ```
-     `source venv/bin/activate`
+     source venv/bin/activate
     On Windows, use
    - ```
      venv\Scripts\activate
